@@ -46,10 +46,10 @@ public class PessoaDAO {
 				
 				Pessoa pessoaTemp = new Pessoa();
 				// Setar TODOS os atributos
-				pessoaTemp.setPessoaId(resultadoLista.getInt("PessoaId"));
-				pessoaTemp.setNome(resultadoLista.getString("Nome"));
+				pessoaTemp.setNome(resultadoLista.getInt("Nome"));
+				pessoaTemp.setDataNascimento(resultadoLista.getString("Data de Nascimento"));
 				pessoaTemp.setEmail(resultadoLista.getString("Email"));
-				pessoaTemp.setAddress(resultadoLista.getString("Address"));
+				pessoaTemp.setTelefone(resultadoLista.getString("Telefone"));
 				
 				vetorPessoas.add(pessoaTemp);
 			}
@@ -75,7 +75,7 @@ public class PessoaDAO {
 		} catch( SQLException sqlError) {
 			System.out.println("======= Falha ao conectar no banco ");
 			System.out.println("Mensagem de Erro " + sqlError.getMessage());
-			System.out.println("C�digo do Erro " + sqlError.getErrorCode());		
+			System.out.println("Código do Erro " + sqlError.getErrorCode());		
 		}
 	}
 	
@@ -83,11 +83,11 @@ public class PessoaDAO {
 		try {
 			conexao = Conexao.getConexaoBancoDados();
 			comando = conexao.createStatement();
-			System.out.print("Conex�o realizada com sucesso");
+			System.out.print("Conexão realizada com sucesso");
 		} catch( SQLException sqlError) {
 			System.out.println("======= Falha ao conectar no banco ");
 			System.out.println("Mensagem de Erro " + sqlError.getMessage());
-			System.out.println("C�digo do Erro " + sqlError.getErrorCode());		
+			System.out.println("Código do Erro " + sqlError.getErrorCode());		
 		}
 	}	
 	
