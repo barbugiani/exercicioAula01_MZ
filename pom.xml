@@ -10,4 +10,17 @@
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
+    
+    <dependencies>
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>sqljdbc41</artifactId>
+            <version>4.1</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/sqljdbc41.jar</systemPath>
+        </dependency>
+
+    </dependencies>
+    
+    
 </project>
