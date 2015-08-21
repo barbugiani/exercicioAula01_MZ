@@ -46,7 +46,7 @@ public class PessoaDAO {
 				
 				Pessoa pessoaTemp = new Pessoa();
 				// Setar TODOS os atributos
-				pessoaTemp.setNome(resultadoLista.getInt("Nome"));
+				pessoaTemp.setNome(resultadoLista.getString("Nome"));
 				pessoaTemp.setDataNascimento(resultadoLista.getString("Data de Nascimento"));
 				pessoaTemp.setEmail(resultadoLista.getString("Email"));
 				pessoaTemp.setTelefone(resultadoLista.getString("Telefone"));
